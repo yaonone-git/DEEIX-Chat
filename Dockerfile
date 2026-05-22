@@ -1,4 +1,5 @@
 FROM ghcr.io/deeix-ai/deeix-chat:latest
+
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         bash \
@@ -8,5 +9,8 @@ RUN apt-get update \
         python3 \
         python3-pip \
         tzdata \
+    && apt-get upgrade -y libgnutls30 \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
 USER 10014
