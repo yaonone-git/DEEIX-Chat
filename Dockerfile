@@ -1,4 +1,4 @@
-FROM ghcr.io/deeix-ai/deeix-chat:v0.4.6-beta.1
+FROM ghcr.io/deeix-ai/deeix-chat:latest
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
